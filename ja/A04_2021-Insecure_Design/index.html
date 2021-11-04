@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -112,38 +112,44 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="../../" hreflang="en" class="md-select__link">
+                  <a href="../../A04_2021-Insecure_Design/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="../../zh_TW/" hreflang="zh_TW" class="md-select__link">
-                    繁體中文
-                  </a>
-                </li>
-                
-                <li class="md-select__item">
-                  <a href="../" hreflang="ja" class="md-select__link">
+                  <a href="./" hreflang="ja" class="md-select__link">
                     日本語
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="../../pt_BR/" hreflang="pt_BR" class="md-select__link">
+                  <a href="../../it/A04_2021-Insecure_Design/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../pt_BR/A04_2021-Insecure_Design/" hreflang="pt_BR" class="md-select__link">
                     Português (Brasil)
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="../../fr/" hreflang="fr" class="md-select__link">
+                  <a href="../../zh_TW/A04_2021-Insecure_Design/" hreflang="zh_TW" class="md-select__link">
+                    繁體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../fr/A04_2021-Insecure_Design/" hreflang="fr" class="md-select__link">
                     Français
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="../../it/" hreflang="it" class="md-select__link">
-                    Italiano
+                  <a href="../../ar/A04_2021-Insecure_Design/" hreflang="ar" class="md-select__link">
+                    العربية
                   </a>
                 </li>
                 
@@ -403,6 +409,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="目次">
   
   
@@ -618,6 +626,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="目次">
   
   
@@ -724,7 +734,7 @@
                   </a>
                 
                 
-                <h1 id="a042021-">A04:2021 - 安全が確認されない不安な設計</h1>
+                <h1 id="a042021-">A04:2021 - 安全が確認されない不安な設計   <img align="right" alt="icon" src="../../assets/TOP_10_Icons_Final_Insecure_Design.png" style="height:80px;width:80px" /></h1>
 <h2 id="_1">因子</h2>
 <table>
 <thead>
@@ -757,14 +767,12 @@
 <h2 id="_2">概要</h2>
 <p>2021年の新カテゴリーでは、設計やアーキテクチャの欠陥に関するリスクに焦点を当てています。
 私たちは脅威のモデル化、セキュアなデザインパターンおよび、リファレンスアーキテクチャなどをもっと利用していくことが必要です。
+As a community we need to move beyond  "shift-left" in the coding space to pre-code activities that are critical for the principles of Secure by Design. 
 注目すべき CWE (Common Weakness Enumerations) は、CWE-209: エラーメッセージからの情報漏洩、CWE-256: 保護されていない認証情報の保存、CWE-501: 信頼境界線の侵害および、CWE-522: 適切に保護されていないクレデンシャル などです。</p>
 <h2 id="_3">説明</h2>
-<p>「安全が確認されない不安な設計」とは、様々な弱点を表す幅広いカテゴリーで、「安全な設計が行われていない」または、「効果的ではない設計が行われている」と表現されます。
-「安全な設計が行われていない」とは、管理策が欠如していることを意味します。例として、センシティブなデータを暗号化すべきコードに、暗号化するためのメソッドがない場合があげられます。
-「効果的ではない設計が行われている」とは、攻撃者が脅威を発生させる可能性があるにもかかわらず、ドメイン（ビジネス）ロジックの検証が不十分であるために、リスクが顕在化する場合を意味します。
-例として、所得区分に基づいてパンデミック税の軽減措置を処理することになっているドメインロジックが、すべての入力が正しく署名されているかどうかを検証しておらず、本来付与されるべきものよりもはるかに大きな軽減措置を提供している場合が挙げられます。</p>
+<p>Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.</p>
 <h3 id="_4">要件とリソースマネジメント</h3>
-<p>すべてのデータ資産の機密性、真正性、完全性、可用性に関する保護要件および、期待されるビジネスロジックなど、アプリケーションのビジネス要件を収集し、事業部門と協議します。
+<p>すべてのデータ資産の機密性、完全性、可用性、そして真正性に関する保護要件および、期待されるビジネスロジックなど、アプリケーションのビジネス要件を収集し、事業部門と協議します。
 アプリケーションが公開される程度に応じて、（アクセス制御に加えて）テナントを分離する必要があるか検討してください。
 機能的および非機能的なセキュリティ要件を含む、技術的な要件をまとめます。
 セキュリティ活動を含む設計、構築、テストおよび、運用のすべてをカバーする予算を計画し、事業部門と協議します。</p>
@@ -914,32 +922,11 @@
 </tbody>
 </table>
 <h2 id="overview">Overview</h2>
-<p>A new category for 2021 focuses on risks related to design and
-architectural flaws, with a call for more use of threat modeling, secure
-design patterns, and reference architectures. Notable Common Weakness Enumerations (CWEs) include
-<em>CWE-209: Generation of Error Message Containing Sensitive Information</em>,
-<em>CWE-256: Unprotected Storage of Credentials</em>, <em>CWE-501: Trust Boundary
-Violation</em>, and <em>CWE-522: Insufficiently Protected Credentials</em>.</p>
+<p>A new category for 2021 focuses on risks related to design and architectural flaws, with a call for more use of threat modeling, secure design patterns, and reference architectures. As a community we need to move beyond  "shift-left" in the coding space to pre-code activities that are critical for the principles of Secure by Design. Notable Common Weakness Enumerations (CWEs) include <em>CWE-209: Generation of Error Message Containing Sensitive Information</em>, <em>CWE-256: Unprotected Storage of Credentials</em>, <em>CWE-501: Trust Boundary Violation</em>, and <em>CWE-522: Insufficiently Protected Credentials</em>.</p>
 <h2 id="description">Description</h2>
-<p>Insecure design is a broad category representing many different
-weaknesses, expressed as “missing or ineffective control design.”
-Missing insecure design is where a control is absent. For example,
-imagine code that should be encrypting sensitive data, but there is no
-method. Ineffective insecure design is where an attacker could realize a threat,
-but insufficient domain (business) logic validation prevents the action.
-For example, imagine domain logic that is supposed to process pandemic
-tax relief based upon income brackets but does not validate that all
-inputs are correctly signed and provides a much more significant relief
-benefit than should be granted.</p>
+<p>Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.</p>
 <h3 id="requirements-and-resource-management">Requirements and Resource Management</h3>
-<p>Collect and negotiate the business requirements for an application with the
-business, including the protection requirements concerning confidentiality,
-authenticity, integrity, availability of all data assets, and the expected
-business logic. Take into account how exposed your application will be and
-if you need segregation of tenants (additionally to access control). Compile
-the technical requirements, including functional and non-functional security
-requirements. Plan and negotiate the budget covering all design, build,
-testing, and operation, including security activities.</p>
+<p>Collect and negotiate the business requirements for an application with the business, including the protection requirements concerning confidentiality, integrity, availability, and authenticity of all data assets and the expected business logic. Take into account how exposed your application will be and if you need segregation of tenants (additionally to access control). Compile the technical requirements, including functional and non-functional security requirements. Plan and negotiate the budget covering all design, build, testing, and operation, including security activities.</p>
 <h3 id="secure-design">Secure Design</h3>
 <p>Secure design is a culture and methodology that constantly evaluates threats and ensures that code is robustly designed and tested to prevent known attack methods. Threat modeling should be integrated into refinement sessions (or similar activities); look for changes in data flows and access control or other security controls. In the user story development determine the correct flow and failure states, ensure they are well understood and agreed upon by responsible and impacted parties. Analyze assumptions and conditions for expected and failure flows, ensure they are still accurate and desirable. Determine how to validate the assumptions and enforce conditions needed for proper behaviors. Ensure the results are documented in the user story. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.</p>
 <h3 id="secure-development-lifecycle_1">Secure Development Lifecycle</h3>
@@ -972,7 +959,7 @@ testing, and operation, including security activities.</p>
     for each tier of your application.</p>
 </li>
 <li>
-<p>Segregate tier layers on the system and network layers depending on the 
+<p>Segregate tier layers on the system and network layers depending on the
     exposure and protection needs</p>
 </li>
 <li>
@@ -1139,10 +1126,10 @@ rejected such transactions.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
