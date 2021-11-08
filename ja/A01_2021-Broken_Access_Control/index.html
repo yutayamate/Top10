@@ -118,14 +118,8 @@
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="./" hreflang="ja" class="md-select__link">
-                    日本語
-                  </a>
-                </li>
-                
-                <li class="md-select__item">
-                  <a href="../../it/A01_2021-Broken_Access_Control/" hreflang="it" class="md-select__link">
-                    Italiano
+                  <a href="../../fr/A01_2021-Broken_Access_Control/" hreflang="fr" class="md-select__link">
+                    Français
                   </a>
                 </li>
                 
@@ -142,14 +136,20 @@
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="../../fr/A01_2021-Broken_Access_Control/" hreflang="fr" class="md-select__link">
-                    Français
+                  <a href="../../ar/A01_2021-Broken_Access_Control/" hreflang="ar" class="md-select__link">
+                    العربية
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="../../ar/A01_2021-Broken_Access_Control/" hreflang="ar" class="md-select__link">
-                    العربية
+                  <a href="./" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../it/A01_2021-Broken_Access_Control/" hreflang="it" class="md-select__link">
+                    Italiano
                   </a>
                 </li>
                 
@@ -775,10 +775,12 @@
 <p>開発者とQAスタッフは、アクセス制御に関する機能面での単体及び結合テストを取り入れるべきです。</p>
 <h2 id="_5">攻撃シナリオの例</h2>
 <p><strong>シナリオ #1:</strong> アプリケーションが、アカウント情報にアクセスするSQL呼出しに未検証のデータを使用しています。</p>
-<pre><code> https://example.com/app/accountInfo?acct=notmyacct
+<pre><code> pstmt.setString(1, request.getParameter(&quot;acct&quot;));
+ ResultSet results = pstmt.executeQuery( );
 </code></pre>
 <p>攻撃者は、単にブラウザでパラメータ'acct'を任意のアカウント番号に改変して送信します。適切な検証がない場合、攻撃者は任意のアカウントにアクセスできます。</p>
-<p>https://example.com/app/accountInfo?acct=notmyacct</p>
+<pre><code> https://example.com/app/accountInfo?acct=notmyacct
+</code></pre>
 <p><strong>シナリオ #2:</strong> ある攻撃者は、ブラウザでURLを指定してアクセスします。管理者ページにアクセスするには管理者権限が必要です。</p>
 <pre><code> https://example.com/app/getappInfo
  https://example.com/app/admin_getappInfo
