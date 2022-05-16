@@ -58,19 +58,19 @@ OWASP AppSensor、OWASP ModSecurity Core Rule Setを使用したModSecurityな�
 
 ## 攻撃シナリオの例
 
-**シナリオ #1:** 
+**シナリオ #1:**
 
 ある児童医療プランのウェブサイト運営者は、監視とログの不足のために侵害を検知できませんでした。
 攻撃者が 350 万人以上の子どもたちの数千もの機密性の高い健康記録にアクセスし変更したという連絡が、外部の関係者から医療機関にありました。
 事故後のレビューでは、ウェブサイトの開発者が重要な脆弱性に対処していなかったことが判明しました。
 システムのロギングやモニタリングが行われていなかったため、データ侵害は 2013 年から 7 年以上にわたって進行していた可能性があります。
 
-**シナリオ #2:** 
+**シナリオ #2:**
 
 あるインドの大手航空会社で、パスポートやクレジットカードなど数百万人の乗客の 10 年分以上の個人情報を含むデータが流出しました。
 このデータ流出は、第三者のクラウドホスティングプロバイダーで発生し、しばらくしてから航空会社に通知されました。
 
-**シナリオ #3:** 
+**シナリオ #3:**
 
 ある欧州の大手航空会社が、GDPRの報告対象となる侵害を受けました。
 この違反は、決済アプリケーションのセキュリティ脆弱性が攻撃者に悪用され、40万件以上の顧客の決済記録が収集されたことが原因とされています。
@@ -81,7 +81,7 @@ OWASP AppSensor、OWASP ModSecurity Core Rule Setを使用したModSecurityな�
 -   [OWASP Proactive Controls: Implement Logging and
     Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
 
--   [OWASP Application Security Verification Standard: V8 Logging and
+-   [OWASP Application Security Verification Standard: V7 Logging and
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
 
 -   [OWASP Testing Guide: Testing for Detailed Error
@@ -91,7 +91,7 @@ OWASP AppSensor、OWASP ModSecurity Core Rule Setを使用したModSecurityな�
     Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html)
 
 -   [OWASP Cheat Sheet:
-    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html))   
+    Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 
 -   [Data Integrity: Recovering from Ransomware and Other Destructive
     Events](https://csrc.nist.gov/publications/detail/sp/1800-11/final)
@@ -135,7 +135,7 @@ Insufficient Logging* to include *CWE-117 Improper Output Neutralization
 for Logs*, *CWE-223 Omission of Security-relevant Information*, and
 *CWE-532* *Insertion of Sensitive Information into Log File*.
 
-## Description 
+## Description
 
 Returning to the OWASP Top 10 2021, this category is to help detect,
 escalate, and respond to active breaches. Without logging and
@@ -167,7 +167,7 @@ events visible to a user or an attacker (see [A01:2021-Broken Access Control](A0
 
 ## How to Prevent
 
-Developers should implement some or all the following controls, 
+Developers should implement some or all the following controls,
 depending on the risk of the application:
 
 -   Ensure all login, access control, and server-side input validation
@@ -225,7 +225,7 @@ result by the privacy regulator.
 -   [OWASP Proactive Controls: Implement Logging and
     Monitoring](https://owasp.org/www-project-proactive-controls/v3/en/c9-security-logging.html)
 
--   [OWASP Application Security Verification Standard: V8 Logging and
+-   [OWASP Application Security Verification Standard: V7 Logging and
     Monitoring](https://owasp.org/www-project-application-security-verification-standard)
 
 -   [OWASP Testing Guide: Testing for Detailed Error
