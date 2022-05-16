@@ -23,7 +23,7 @@
 
 -   クレデンシャルの復旧やパスワードを忘れた場合のプロセスが弱い、あるいは効果がない。たとえば「秘密の質問」のようなやり方は安全とは言えません。
 
--   パスワードをデータストアに保存する際に、プレーンテキストのままで保存している、または暗号化して保存している。あるいはハッシュ化して保存していたとしても脆弱なハッシュ関数を利用している。（**A02:2021-暗号化の失敗**を参照）
+-   パスワードをデータストアに保存する際に、プレーンテキストのままで保存している、または暗号化して保存している。あるいはハッシュ化して保存していたとしても脆弱なハッシュ関数を利用している。（[A02:2021-暗号化の失敗](A02_2021-Cryptographic_Failures.ja.md)を参照）
 
 -   多要素認証を採用していない。あるいは間違った使い方をしている。
 
@@ -167,7 +167,7 @@ attacks. There may be authentication weaknesses if the application:
     safe.
 
 -   Uses plain text, encrypted, or weakly hashed passwords data stores (see
-    **A02:2021-Cryptographic Failures**).
+    [A02:2021-Cryptographic Failures](A02_2021-Cryptographic_Failures.md)).
 
 -   Has missing or ineffective multi-factor authentication.
 
@@ -218,8 +218,8 @@ application can be used as a password oracle to determine if the
 credentials are valid.
 
 **Scenario #2:** Most authentication attacks occur due to the continued
-use of passwords as a sole factor. Once considered, best practices,
-password rotation, and complexity requirements encourage users to use
+use of passwords as a sole factor. Once considered best practices,
+password rotation and complexity requirements encourage users to use
 and reuse weak passwords. Organizations are recommended to stop these
 practices per NIST 800-63 and use multi-factor authentication.
 
