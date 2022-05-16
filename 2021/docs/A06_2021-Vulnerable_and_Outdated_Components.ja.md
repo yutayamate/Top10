@@ -9,7 +9,7 @@
 ## 概要
 
 この項目は Top10 コミュニティによる調査では 2 位でしたが、Top10 に入る十分なデータもありました。
-脆弱なコンポーネントは、テストやリスク評価に苦労する問題として知られており、含まれるCWE(Common Weakness Enumerations)にマッピングされたCWEがない唯一のカテゴリーです。
+脆弱なコンポーネントは、テストやリスク評価に苦労する問題として知られており、含まれるCWE(Common Weakness Enumerations)にマッピングされたCVEがない唯一のカテゴリーです。
 このため標準の攻撃の難易度および、攻撃による影響のウェイトは5.0を使用しています。
 注目すべき CWE は CWE-1104 メンテナンスされていないサードパーティー製コンポーネントの使用と、OWASP Top10 2013 A9 および 2017 A9 を参照する２つの CWE です。
 
@@ -31,14 +31,14 @@
 
 -   ソフトウェア開発者が、更新やアップグレードまたはパッチの互換性をテストしない場合。
 
--   コンポーネントの設定をセキュアにしていない場合。（A05-2021: セキュリティの設定ミス 参照）
+-   コンポーネントの設定をセキュアにしていない場合。（[A05:2021-セキュリティの設定ミス](A05_2021-Security_Misconfiguration.ja.md)を参照）
 
 ## 防止方法
 
 以下に示すパッチ管理プロセスが必要です。
 
 -   未使用の依存関係、不要な機能、コンポーネント、ファイルや文書を取り除く。
-    
+
 -   Versions Maven Plugin, OWASP Dependency Check, Retire.jsなどのツールを使用して、クライアントおよびサーバの両方のコンポーネント（フレームワークやライブラリなど）とその依存関係の棚卸しを継続的に行う。
     コンポーネントの脆弱性についてCVE(Common Vulnerability and Exposures)やNVD(National Vulnerability Database)などの情報ソースを継続的にモニタリングする。ソフトウェア構成分析ツールを使用してプロセスを自動化する。
     使用しているコンポーネントに関するセキュリティ脆弱性の電子メールアラートに登録する。
@@ -49,12 +49,12 @@
 
 -   メンテナンスされていない、もしくはセキュリティパッチが作られていない古いバージョンのライブラリとコンポーネントを監視する。
     パッチ適用が不可能な場合は、発見された問題を監視、検知または保護するために、仮想パッチの適用を検討する。
-    
+
 いかなる組織も、アプリケーションまたはポートフォリオの存続期間は、モニタリングとトリアージを行い更新または設定変更を行う継続的な計画があることを確認する必要があります。
 
 ## 攻撃シナリオの例
 
-**シナリオ #1:** 
+**シナリオ #1:**
 
 コンポーネントは通常、アプリケーション自体と同じ権限で実行されるため、どんなコンポーネントに存在する欠陥も、深刻な影響を及ぼす可能性があります。
 そのような欠陥は、偶発的（例：コーディングエラー）または意図的（例：コンポーネントのバックドア）両方の可能性があります。
@@ -93,11 +93,11 @@
 
 ## 対応する CWE のリスト
 
-[CWE-937 OWASP Top 10 2013 A9: 既知の脆弱性のあるコンポーネントの使用](https://cwe.mitre.org/data/definitions/937.html)
+CWE-937 OWASP Top 10 2013 A9: 既知の脆弱性のあるコンポーネントの使用
 
-[CWE-1035 2017 Top 10 A9: 既知の脆弱性のあるコンポーネントの使用](https://cwe.mitre.org/data/definitions/1035.html)
+CWE-1035 2017 Top 10 A9: 既知の脆弱性のあるコンポーネントの使用
 
-[CWE-1104 メンテナンスされていないサードパーティー製コンポーネントの使用](https://cwe.mitre.org/data/definitions/1104.html)
+CWE-1104 メンテナンスされていないサードパーティー製コンポーネントの使用
 
 # A06:2021 – Vulnerable and Outdated Components    ![icon](assets/TOP_10_Icons_Final_Vulnerable_Outdated_Components.png){: style="height:80px;width:80px" align="right"}
 
@@ -112,12 +112,12 @@
 It was #2 from the Top 10 community survey but also had enough data to make the
 Top 10 via data. Vulnerable Components are a known issue that we
 struggle to test and assess risk and is the only category to not have
-any Common Weakness Enumerations (CWEs) mapped to the included CWEs, so a default exploits/impact
+any Common Vulnerability and Exposures (CVEs) mapped to the included CWEs, so a default exploits/impact
 weight of 5.0 is used. Notable CWEs included are *CWE-1104: Use of
 Unmaintained Third-Party Components* and the two CWEs from Top 10 2013
 and 2017.
 
-## Description 
+## Description
 
 You are likely vulnerable:
 
@@ -143,7 +143,7 @@ You are likely vulnerable:
     upgraded, or patched libraries.
 
 -   If you do not secure the components’ configurations (see
-    A05:2021-Security Misconfiguration).
+    [A05:2021-Security Misconfiguration](A05_2021-Security_Misconfiguration.md)).
 
 ## How to Prevent
 
@@ -155,7 +155,7 @@ There should be a patch management process in place to:
 -   Continuously inventory the versions of both client-side and
     server-side components (e.g., frameworks, libraries) and their
     dependencies using tools like versions, OWASP Dependency Check,
-    retire.js, etc. Continuously monitor sources like Common Vulnerability and 
+    retire.js, etc. Continuously monitor sources like Common Vulnerability and
     Exposures (CVE) and National Vulnerability Database (NVD) for
     vulnerabilities in the components. Use software composition analysis
     tools to automate the process. Subscribe to email alerts for
