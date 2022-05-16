@@ -38,7 +38,7 @@
 -   推奨される選択肢は安全なAPIを使用すること。インタープリタの使用を完全に避ける、パラメータ化されたインターフェースを利用する、または、オブジェクト・リレーショナル・マッピング・ツール（ORM）を使用するように移行すること。<br/>
     **注意:** パラメータ化されていたとしても、ストアドプロシージャでは、PL/SQLまたはT-SQLによってクエリとデータを連結したり、EXECUTE IMMEDIATEやexec()を利用して悪意のあるデータを実行することによって、SQLインジェクションを発生させることができる。
 
--   ポジティブな、言い換えると「ホワイトリスト」によるサーバーサイドの入力検証を用いる。特殊文字を必要とする多くのアプリケーション、たとえばモバイルアプリケーション用のテキスト領域やAPIなどにおいては完全な防御方法とはならない。
+-   ポジティブなサーバーサイドの入力検証を用いる。特殊文字を必要とする多くのアプリケーション、たとえばモバイルアプリケーション用のテキスト領域やAPIなどにおいては完全な防御方法とはならない。
 
 -   上記の対応が困難な動的クエリでは、そのインタープリタ固有のエスケープ構文を使用して特殊文字をエスケープする。</br>
     **注意:** テーブル名やカラム名などのSQLストラクチャに対してはエスケープができない。そのため、ユーザ指定のストラクチャ名は危険である。これはレポート作成ソフトウェアに存在する一般的な問題である。
@@ -171,7 +171,7 @@ Downstream Component ('Injection')](https://cwe.mitre.org/data/definitions/74.ht
 ## Overview
 
 Injection slides down to the third position. 94% of the applications
-were tested for some form of injection with a max incidence rate of 19%, an average incidence rate of 3%, and 274k occurances. Notable Common Weakness Enumerations (CWEs) included are
+were tested for some form of injection with a max incidence rate of 19%, an average incidence rate of 3%, and 274k occurrences. Notable Common Weakness Enumerations (CWEs) included are
 *CWE-79: Cross-site Scripting*, *CWE-89: SQL Injection*, and *CWE-73:
 External Control of File Name or Path*.
 
